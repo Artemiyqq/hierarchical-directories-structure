@@ -33,7 +33,7 @@ namespace HierarchicalDirectoryStructure
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Directory}/{action=Index}/{id?}");
 
             app.Run();
         }

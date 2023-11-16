@@ -2,3 +2,20 @@ html {
   position: relative;
   min-height: 100%;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  margin-top: 0px;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+.if-not-empty-h2 {
+  margin-bottom: 0px;
+}

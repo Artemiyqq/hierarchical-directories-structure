@@ -1,0 +1,22 @@
+﻿@model HierarchicalDirectoryStructure.Models.DisplayDirectory
+
+@{
+    ViewData["Title"] = $"Directory '{@Model.Name}'";
+}
+
+<h1>Directory "@Model.Name"</h1>
+
+@if (Model.Children.Count > 0)
+{
+    <h2 class="if-not-empty-h2">Subdirectories</h2>
+    <ul>
+        @foreach (var child in Model.Children)
+        {
+            <li><a href="@Url.Action("Index", "Directory", new { directoryName = child.Name })">@child.Name</a></li>
+        }
+    </ul>
+}
+else
+{
+    <h2 class="if-empty">That directory is empty.</h2>
+}
