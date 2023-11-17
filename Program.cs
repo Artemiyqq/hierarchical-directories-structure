@@ -1,4 +1,5 @@
 using HierarchicalDirectoryStructure.Infrastructure;
+using HierarchicalDirectoryStructure.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace HierarchicalDirectoryStructure
@@ -13,6 +14,9 @@ namespace HierarchicalDirectoryStructure
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+            builder.Services.AddScoped<DirectoryPathParserService>();
+            builder.Services.AddScoped<DirectoriesCreationService>();
 
             builder.Services.AddControllersWithViews();
 

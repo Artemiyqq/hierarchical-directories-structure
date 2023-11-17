@@ -3,11 +3,6 @@ html {
   min-height: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 ul {
   margin-top: 0px;
 }
@@ -18,4 +13,8 @@ h2 {
 
 .if-not-empty-h2 {
   margin-bottom: 0px;
+}
+
+input {
+    padding-left: 40px;
 }
